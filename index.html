@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Dashboard and marketplace</title>
+    <link rel="icon" type="image/png" href="healthcare_icon.jpg">
+    <style>
+        /* CSS Variables for easy color management */
+        :root {
+            --primary-color: #2249ab;
+            --white: #ffffff;
+            --text-dark: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Header Bar */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 50px 10%;
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        /* Simple Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+        }
+
+        body {
+            font-family: Arial;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            place-items: center;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .embedded-report {
+            width: 85vw; height: 80vh; display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><strong>Healthcare Dashboard and marketplace</strong></div>
+    </header>
+
+
+    <section class="content">
+        <h2>Introduction</h2>
+        <p>This website allows for users to search for what plan they want, and see what health insurance plans look like at an high level overview.
+            
+        </p>
+    </section>
+
+    <section>
+        <div class="tab">
+            <button id="defaultTab" class="tablinks" onclick="openCity(event, 'London')">Search for a Plan</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Overview of Plans by Age and State</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Coinsurance</button>
+        </div>
+
+        <div id="London" class="tabcontent">
+            <iframe class="embedded-report" src="https://datastudio.google.com/embed/reporting/5bed9896-8a07-4dca-90b1-4553af40d391/page/O8mvF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+            <iframe class="embedded-report" src="https://datastudio.google.com/embed/reporting/7d812bfe-e208-43e5-86fa-acbfd7894d1a/page/KCduF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+            <iframe class="embedded-report" src="https://datastudio.google.com/embed/reporting/045af727-0615-4a2d-bb1b-51c02b933d6b/page/7dSvF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Charles Bennington , Gonzaga University</p>
+        <p>This is a school project for CPSC 482.</p>
+    </footer>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultTab").click();
+    </script>
+
+</body>
+
+</html>

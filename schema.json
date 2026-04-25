@@ -1,0 +1,162 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "BenefitName",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "BusinessYear",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "CoinsInnTier1",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "CoinsInnTier2",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "CoinsOutofNet",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "CopayInnTier1",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "CopayInnTier2",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "CopayOutofNet",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "EHBVarReason",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Exclusions",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Explanation",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ImportDate",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IsCovered",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IsEHB",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IsExclFromInnMOOP",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IsExclFromOonMOOP",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IsStateMandate",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IsSubjToDedTier1",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IsSubjToDedTier2",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IssuerId",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IssuerId2",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "LimitQty",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "LimitUnit",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "MinimumStay",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "PlanId",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "QuantLimitOnSvc",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "RowNumber",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "SourceName",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "StandardComponentId",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "StateCode",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "StateCode2",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "VersionNum",
+    "type": "INTEGER"
+  }
+]
