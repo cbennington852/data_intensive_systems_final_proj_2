@@ -1,48 +1,43 @@
+bq mk --dataset --location=US final-project-492620:verify_final_project_pipeline
+
+
 bq load \
+    --replace \
     --max_bad_records=1000 \
     --allow_quoted_newlines \
     --schema=schema.json \
-    final_project.BenefitsCostSharing \
+    verify_final_project_pipeline.BenefitsCostSharing \
     BenefitsCostSharing.csv
 
 bq load \
+    --autodetect \
+    --replace \
     --max_bad_records=1000 \
     --allow_quoted_newlines \
-    final_project.BusinessRules \
+    verify_final_project_pipeline.BusinessRules \
     BusinessRules.csv
 
-bq load \
-    --max_bad_records=1000 \
-    --allow_quoted_newlines \
-    final_project.CleanAttributes \
-    CleanAttributes.csv
 
 bq load \
+    --autodetect \
+    --replace \
     --max_bad_records=1000 \
     --allow_quoted_newlines \
-    final_project.Crosswalk2015 \
-    Crosswalk2015.csv
-
-bq load \
-    --max_bad_records=1000 \
-    --allow_quoted_newlines \
-    final_project.Crosswalk2016 \
-    Crosswalk2016.csv
-
-bq load \
-    --max_bad_records=1000 \
-    --allow_quoted_newlines \
-    final_project.Network \
+    verify_final_project_pipeline.Network \
     Network.csv
 
 bq load \
+    --autodetect \
+    --replace \
     --max_bad_records=1000 \
     --allow_quoted_newlines \
-    final_project.Rate \
+    verify_final_project_pipeline.Rate \
     Rate.csv
 
 bq load \
+    --autodetect \
+    --replace \
     --max_bad_records=1000 \
     --allow_quoted_newlines \
-    final_project.ServiceArea \
+    verify_final_project_pipeline.ServiceArea \
     ServiceArea.csv

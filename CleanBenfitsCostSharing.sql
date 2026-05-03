@@ -1,5 +1,14 @@
+/*
+Charles Bennington
+April 25th 2026
+
+The purpose of this SQL script is to clean the BenefitsCostSharing dataset, which is INCREDIBLY messy. This makes a new 
+table with greatly reduced features.  
+*/
+
+
 --Initial Cleaning of this horrible table.
-CREATE OR REPLACE TABLE `final-project-492620.final_project.NewBenefitsCostSharing` AS
+CREATE OR REPLACE TABLE `final-project-492620.verify_final_project_pipeline.NewBenefitsCostSharing` AS
 SELECT
 CASE
  WHEN CoinsInnTier1 = '$0' THEN 0.0
@@ -27,8 +36,13 @@ BusinessYear,
 IssuerId,
 PlanId,
 StateCode,
-FROM `final-project-492620.final_project.BenefitsCostSharing`
+FROM `final-project-492620.verify_final_project_pipeline.BenefitsCostSharing`;
 
 -- Weird ID bug ("There are two separate formats of ID in this row. ")
-UPDATE `final-project-492620.final_project.NewBenefitsCostSharing` SET PlanId = LEFT (PlanId, LENGTH(PlanId) - 3)
+-- Notes:
+-- The BenefitsCostSharing has a bad id, with the last two chars are bad, and should be chopped off.
+-- Then we can merge on planID.
+-- They are the same id, just the benefits cost sharing has the weird concatenated thing. 
+-- Below is fixing the issue with the BenefitsCostSharing, this fixes the issue with the planID having the concatenated strings on the end. 
+UPDATE `final-project-492620.verify_final_project_pipeline.NewBenefitsCostSharing` SET PlanId = LEFT (PlanId, LENGTH(PlanId) - 3)
 WHERE (LENGTH(PlanId) >= 3);

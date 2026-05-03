@@ -109,24 +109,118 @@
         }
 
         .embedded-report {
-            width: 85vw; height: 80vh; display: flex;
+            width: 95vw;
+            height: 90vh;
+            display: flex;
+        }
+    </style>
+    <style>
+        .insurance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            font-family: sans-serif;
+            color: #333;
+            margin: 2vw;
+        }
+
+        .concept-card {
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            background: #f8f9fa;
+        }
+
+        .concept-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+            color: #0056b3;
+        }
+
+        .concept-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .concept-card-plans {
+            border-left: 4px solid #4682B4;
+            padding: 15px;
+            background: #f8f9fa;
+        }
+
+        .concept-card-plans h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+            color: #367eb8;
+        }
+
+        .concept-card-plans p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Two equal columns */
+            gap: 20px;
+            /* Space between columns */
         }
     </style>
 </head>
 
 <body>
 
-    <header>
+    <!-- <header>
         <div class="logo"><strong>Healthcare Dashboard and marketplace</strong></div>
-    </header>
+    </header> -->
 
 
-    <section class="content">
-        <h2>Introduction</h2>
-        <p>This website allows for users to search for what plan they want, and see what health insurance plans look like at an high level overview.
-            
-        </p>
-    </section>
+
+
+    <div class="grid-container">
+        <div class="column">
+            <h2 style="margin: 2vh; color: #0056b3;">Important Health Insurance Terms</h2>
+            <section class="insurance-grid">
+                <div class="concept-card">
+                    <h3>Deductible</h3>
+                    <p>The fixed amount you pay out-of-pocket before your insurance coverage begins to contribute.</p>
+                </div>
+
+                <div class="concept-card">
+                    <h3>Coinsurance</h3>
+                    <p>Your share of costs (e.g., 20%) for a service after you've already met your deductible.</p>
+                </div>
+
+                <div class="concept-card">
+                    <h3>Monthly Rate</h3>
+                    <p>The amount of money you pay each month for that specific healthcare plan.</p>
+                </div>
+            </section>
+        </div>
+        <div class="column">
+            <!-- Updated to Steel Blue -->
+            <h2 style="margin: 2vh; color: #4682B4;">Common Coverage Sections</h2>
+            <section class="insurance-grid">
+                <div class="concept-card-plans">
+                    <h3>Dental</h3>
+                    <p>Covers routine cleanings and more intensive procedures like fillings or oral surgery.</p>
+                </div>
+
+                <div class="concept-card-plans">
+                    <h3>Vision</h3>
+                    <p>Focuses on annual eye exams and discounts or allowances for glasses and contacts.</p>
+                </div>
+
+                <div class="concept-card-plans">
+                    <h3>Mental Health</h3>
+                    <p>Provides coverage for therapy, psychiatric evaluations, and substance abuse treatments.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
 
     <section>
         <div class="tab">
@@ -136,15 +230,24 @@
         </div>
 
         <div id="London" class="tabcontent">
-            <iframe class="embedded-report" src="https://datastudio.google.com/embed/reporting/5bed9896-8a07-4dca-90b1-4553af40d391/page/O8mvF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <iframe class="embedded-report"
+                src="https://datastudio.google.com/embed/reporting/5bed9896-8a07-4dca-90b1-4553af40d391/page/O8mvF"
+                frameborder="0" style="border:0" allowfullscreen
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
         </div>
 
         <div id="Paris" class="tabcontent">
-            <iframe class="embedded-report" src="https://datastudio.google.com/embed/reporting/7d812bfe-e208-43e5-86fa-acbfd7894d1a/page/KCduF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <iframe class="embedded-report"
+                src="https://datastudio.google.com/embed/reporting/7d812bfe-e208-43e5-86fa-acbfd7894d1a/page/KCduF"
+                frameborder="0" style="border:0" allowfullscreen
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
         </div>
 
         <div id="Tokyo" class="tabcontent">
-            <iframe class="embedded-report" src="https://datastudio.google.com/embed/reporting/045af727-0615-4a2d-bb1b-51c02b933d6b/page/7dSvF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <iframe class="embedded-report"
+                src="https://datastudio.google.com/embed/reporting/045af727-0615-4a2d-bb1b-51c02b933d6b/page/7dSvF"
+                frameborder="0" style="border:0" allowfullscreen
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
         </div>
     </section>
 
