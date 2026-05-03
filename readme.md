@@ -25,7 +25,7 @@ This .sql file contains all of the SQL queries I used to make the three looker s
 
 ## Website with embedded views
 
-[Link to website]()
+[Link to website](ascasc)
 
 ## About the Author
 Charles Bennington
